@@ -9,6 +9,9 @@ gem "pg"
 
 gem "propshaft"
 
+gem "slim", "~> 5.2"
+gem "slim-rails", "~> 3.7"
+
 # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
 gem "rubocop-rails-omakase", require: false
 
