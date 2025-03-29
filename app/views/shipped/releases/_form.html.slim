@@ -1,0 +1,25 @@
+= form_with(model: release, class: 'card') do |form|
+  .card__body
+    - if release.errors.any?
+      .form-error-summary
+        h2 "#{pluralize(release.errors.count, "error")} prohibited this release from being saved:"
+        ul
+          - release.errors.each do |error|
+            li = error.full_message
+
+    .form-group
+      = form.label :commit_sha, class: 'form-label'
+      = form.text_field :commit_sha, class: 'form-control'
+
+    .form-group
+      = form.label :released_at, class: 'form-label'
+      = form.datetime_field :released_at, class: 'form-control'
+
+    .form-group
+      = form.label :notes, class: 'form-label'
+      = form.textarea :notes, class: 'form-control'
+
+  .card__footer
+    .flex.gap-md.justify-end
+      = link_to 'Cancel', root_path, class: 'btn'
+      = form.submit class: 'btn btn--primary'

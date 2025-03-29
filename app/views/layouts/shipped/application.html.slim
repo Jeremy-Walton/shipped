@@ -1,0 +1,47 @@
+/ doctype html
+/ html
+/   head
+/     title Shipped
+/     = csrf_meta_tags
+/     = csp_meta_tag
+
+/     = yield :head
+
+/     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/optics.min.css', 'data-turbo-track': 'reload'
+/     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/addons/fonts/phosphor_icons.css', 'data-turbo-track': 'reload'
+/     = stylesheet_link_tag "shipped/application", media: "all"
+
+/   body
+/     = yield
+
+
+
+doctype html
+html lang='en'
+  head
+    title Shipped
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = yield :head
+
+    = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/optics.min.css', 'data-turbo-track': 'reload'
+    = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/addons/fonts/phosphor_icons.css', 'data-turbo-track': 'reload'
+    = stylesheet_link_tag "shipped/application", media: "all"
+  body.app-body
+    header.app__header
+      .navbar
+        div.navbar__brand
+          = image_tag 'shipped/logo.webp', alt: 'Shipped'
+
+        - if content_for?(:breadcrumbs)
+          nav.navbar__content
+            = yield :breadcrumbs
+
+        .navbar__content.navbar__content--justify-end
+          = link_to 'Back to Application', '/', class: 'btn btn--no-border'
+
+    main.app__content
+      = render 'layouts/shipped/flash'
+
+      = yield

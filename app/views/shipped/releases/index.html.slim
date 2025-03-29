@@ -1,0 +1,6 @@
+.flex.items-center.justify-between.margin-y-md
+  h1 Releases
+  = link_to "New Release", new_release_path, class: 'btn btn--primary'
+
+.flex.flex-col.gap-md#releases
+  = render @releases

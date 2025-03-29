@@ -1,0 +1,10 @@
+- content_for :breadcrumbs
+  nav.breadcrumbs
+    = link_to "Releases", root_path, class: "breadcrumbs__link"
+    .breadcrumbs__separator
+      i.icon.ph.ph-caret-right
+    span.breadcrumbs__text New
+
+h1.margin-y-md New release
+
+= render "form", release: @release
