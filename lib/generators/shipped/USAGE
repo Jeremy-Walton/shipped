@@ -1,0 +1,3 @@
+To copy the Shipped initializer to your Rails App, with some configuration values, use:
+
+  rails generate shipped:install
