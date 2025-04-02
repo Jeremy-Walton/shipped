@@ -9,8 +9,9 @@
 
     .grid-evenly-spaced.gap-md
       .form-group
-        = form.label :commit_sha, class: 'form-label'
-        = form.text_field :commit_sha, class: 'form-control'
+        = form.label :release_identifier, class: 'form-label'
+        = form.text_field :release_identifier, class: 'form-control'
+        span.form-hint E.G. the Commit SHA or tag name
 
       .form-group
         = form.label :released_at, class: 'form-label'

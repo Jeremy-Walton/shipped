@@ -50,7 +50,7 @@ module Shipped
 
       # Only allow a list of trusted parameters through.
       def release_params
-        params.expect(release: [ :commit_sha, :released_at, :notes ])
+        params.expect(release: [ :release_identifier, :released_at, :notes ])
       end
   end
 end

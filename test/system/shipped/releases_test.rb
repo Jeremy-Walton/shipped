@@ -15,7 +15,7 @@ module Shipped
       visit releases_url
       click_on "New release"
 
-      fill_in "Commit sha", with: @release.commit_sha
+      fill_in "Commit sha", with: @release.release_identifier
       fill_in "Notes", with: @release.notes
       fill_in "Released at", with: @release.released_at
       click_on "Create Release"
@@ -28,7 +28,7 @@ module Shipped
       visit release_url(@release)
       click_on "Edit this release", match: :first
 
-      fill_in "Commit sha", with: @release.commit_sha
+      fill_in "Commit sha", with: @release.release_identifier
       fill_in "Notes", with: @release.notes
       fill_in "Released at", with: @release.released_at.to_s
       click_on "Update Release"

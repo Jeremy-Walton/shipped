@@ -20,7 +20,7 @@ module Shipped
 
     test "should create release" do
       assert_difference("Release.count") do
-        post releases_url, params: { release: { commit_sha: @release.commit_sha, notes: @release.notes, released_at: @release.released_at } }
+        post releases_url, params: { release: { release_identifier: @release.release_identifier, notes: @release.notes, released_at: @release.released_at } }
       end
 
       assert_redirected_to release_url(Release.last)
@@ -37,7 +37,7 @@ module Shipped
     end
 
     test "should update release" do
-      patch release_url(@release), params: { release: { commit_sha: @release.commit_sha, notes: @release.notes, released_at: @release.released_at } }
+      patch release_url(@release), params: { release: { release_identifier: @release.release_identifier, notes: @release.notes, released_at: @release.released_at } }
       assert_redirected_to release_url(@release)
     end
 

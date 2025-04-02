@@ -1,6 +1,6 @@
 module Shipped
   class Release < ApplicationRecord
-    validates :commit_sha, :released_at, presence: true
-    validates :commit_sha, uniqueness: true
+    validates :release_identifier, :released_at, presence: true
+    validates :release_identifier, uniqueness: true
   end
 end

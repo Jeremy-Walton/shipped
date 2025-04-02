@@ -3,7 +3,11 @@
     .flex.items-center.justify-between
       .text-pair.text-pair--inline
         .text-pair__title = release.released_at.to_fs(:full_date)
-        .text-pair__subtitle = "(#{release.commit_sha})"
+        .text-pair__subtitle
+          - if  Shipped.sha_link.present?
+            = link_to "(#{release.release_identifier})", "#{Shipped.sha_link}/#{release.release_identifier}", target: '_blank'
+          - else
+            = "(#{release.release_identifier})"
 
       = link_to edit_release_path(release), class: 'btn btn--no-border btn--icon btn--small' do
         i.icon.ph.ph-pencil
