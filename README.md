@@ -1,6 +1,11 @@
 # Shipped
 
+![logo](app/assets/images/shipped/logo.svg)
+
 Shipped is a Ruby on Rails plugin for managing application release notes within your application. It provides a simple admin interface for creating releases.
+
+![example 1](app/assets/images/shipped/example1.png)
+![example 2](app/assets/images/shipped/example2.png)
 
 ## Installation
 
@@ -41,7 +46,7 @@ end
 If you want to build a publicly accessible release page, simply loop over the releases in your view. Note: This example uses the [Optics Design System](https://optics.rolemodel.design/) for styles, but you can use any CSS framework or custom styles.
 
 ```erb
-<% - Shipped::Release.order(released_at: :desc).each do |release| %>
+<% Shipped::Release.order(released_at: :desc).each do |release| %>
   <div class="card card--padded" id="<%= dom_id(release) %>">
     <div class="flex flex-col gap-md">
       <div class="flex items-center justify-between">
@@ -73,6 +78,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## TODO: Things needing development
 
+- [ ] Publish the gem to RubyGems
 - [ ] Add a way to generate release notes automatically
   - [ ] Configurable template that gets prefilled.
   - [ ] From commit messages. Configurable access to Github API
