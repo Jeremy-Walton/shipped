@@ -20,6 +20,21 @@
   padding-block: var(--op-space-medium);
 }
 
+/* Navbar */
+
+.navbar {
+  .navbar__brand {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 100%;
+      height: unset;
+      min-width: calc(var(--op-size-unit) * 25); /* 100px */
+    }
+  }
+}
+
 /* Form */
 
 .field_with_errors,
