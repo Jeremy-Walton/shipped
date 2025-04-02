@@ -27,7 +27,11 @@ html lang='en'
 
     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/optics.min.css', 'data-turbo-track': 'reload'
     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/addons/fonts/phosphor_icons.css', 'data-turbo-track': 'reload'
+    = stylesheet_link_tag 'https://unpkg.com/trix@2.0.8/dist/trix.css', 'data-turbo-track': 'reload'
     = stylesheet_link_tag "shipped/application", media: "all"
+
+    = javascript_include_tag 'shipped/application', type: :module, defer: true
+
   body.app-body
     header.app__header
       .navbar

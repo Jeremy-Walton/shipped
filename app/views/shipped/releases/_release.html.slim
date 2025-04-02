@@ -8,4 +8,4 @@
       = link_to edit_release_path(release), class: 'btn btn--no-border btn--icon btn--small' do
         i.icon.ph.ph-pencil
 
-    p = release.notes
+    p = release.notes.html_safe

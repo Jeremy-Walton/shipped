@@ -7,17 +7,19 @@
           - release.errors.each do |error|
             li = error.full_message
 
-    .form-group
-      = form.label :commit_sha, class: 'form-label'
-      = form.text_field :commit_sha, class: 'form-control'
+    .grid-evenly-spaced.gap-md
+      .form-group
+        = form.label :commit_sha, class: 'form-label'
+        = form.text_field :commit_sha, class: 'form-control'
 
-    .form-group
-      = form.label :released_at, class: 'form-label'
-      = form.datetime_field :released_at, class: 'form-control'
+      .form-group
+        = form.label :released_at, class: 'form-label'
+        = form.datetime_field :released_at, class: 'form-control'
 
     .form-group
       = form.label :notes, class: 'form-label'
-      = form.textarea :notes, class: 'form-control'
+      = form.hidden_field :notes
+      trix-editor input="release_notes"
 
   .card__footer
     .flex.gap-md.justify-end

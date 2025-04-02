@@ -4,7 +4,7 @@ module Shipped
 
     # GET /releases
     def index
-      @releases = Release.order(created_at: :desc)
+      @releases = Release.order(released_at: :desc)
     end
 
     # GET /releases/new

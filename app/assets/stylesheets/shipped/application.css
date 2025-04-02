@@ -14,6 +14,39 @@
  *= require_self
  */
 
-.field_with_errors {
+/* Layout */
+
+.app__content {
+  padding-block: var(--op-space-medium);
+}
+
+/* Form */
+
+.field_with_errors,
+trix-editor {
   grid-column: 1 / 3;
+}
+
+.trix-button-group--file-tools {
+  display: none !important;
+}
+
+/* Utilities */
+
+.grid-evenly-spaced {
+  --min-size: calc(var(--op-size-unit) * 50); /* 200px */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-size), 1fr));
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-end: var(--op-space-medium);
+
+  h1 {
+    margin: 0;
+  }
 }

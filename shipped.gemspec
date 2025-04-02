@@ -23,4 +23,6 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 8.0.1"
+  spec.add_dependency "slim", "~> 5.2"
+  spec.add_dependency "slim-rails", "~> 3.7"
 end

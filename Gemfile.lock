@@ -3,6 +3,8 @@ PATH
   specs:
     shipped (0.1.0)
       rails (>= 8.0.1)
+      slim (~> 5.2)
+      slim-rails (~> 3.7)
 
 GEM
   remote: https://rubygems.org/
@@ -251,8 +253,6 @@ DEPENDENCIES
   puma
   rubocop-rails-omakase
   shipped!
-  slim (~> 5.2)
-  slim-rails (~> 3.7)
 
 BUNDLED WITH
    2.5.22
