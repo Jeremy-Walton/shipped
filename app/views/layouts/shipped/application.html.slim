@@ -25,6 +25,9 @@ html lang='en'
 
     = yield :head
 
+    meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"
+    meta name="description" content="The release notes framework for Ruby on Rails."
+
     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/optics.min.css', 'data-turbo-track': 'reload'
     = stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/@rolemodel/optics@2.1.2/dist/css/addons/fonts/phosphor_icons.css', 'data-turbo-track': 'reload'
     = stylesheet_link_tag 'https://unpkg.com/trix@2.0.8/dist/trix.css', 'data-turbo-track': 'reload'
